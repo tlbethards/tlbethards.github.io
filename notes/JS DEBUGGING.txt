@@ -1,0 +1,163 @@
+JS DEBUGGING
+
+firefox and chrome have the best devtools for debugging js
+
+console.log()
+
+place this at certain points to show the intermediate
+valuies of variables
+
+let a = 5;
+
+console.log(a)
+
+this will show a in the console log
+
+console.clear() will clear the browser console.
+
+
+
+TYPEOF TO CHECK TYPE OF VAR
+
+can use typeof to check the type of variable
+
+console.log(typeof ""); strings
+console.log(typeof 0); number
+console.log(typeof []); object
+console.log(typeof {}); object
+
+the console log will display the words for each
+
+let seven = 7;
+let three = "3";
+console.log(seven + three);
+
+console.log(typeof seven);
+console.log(typeof three);
+
+it will log numner and string
+
+CATCH MISSPELLED VARS AND FUNCS
+
+many times this can cause the errors
+
+misspelled, miscapitalized, etc
+
+CATCH UNCLOSED PARENS, BRACKETS, BRACES, AND QUOTES
+
+to fix this, when typing and openning character, immediately type the closing
+one too and fill in between
+
+MIXED USAGE OF SINGLE AND DBL QUOTES
+
+var quoteOne = "I've had a perfectly wonderful evening, but this wasn't it.";
+var quoteInString = "Groucho Marx once said 'Quote me as saying I was mis-quoted.'";
+const uhOhGroucho = 'I've had a perfectly wonderful evening, but this wasn't it.';
+
+the third string is incorrect
+
+to fix this use \ to escape and use the same kind of quotes
+
+const allSameQuotes = 'I\'ve had a perfectly wonderful evening, but this wasn\'t it.';
+
+CATCH ASSIGNMENZT OPERATOR INSTEAD OF EQUALITY OPERATOR
+
+branching programs (ones that do certain things if conditions are met- if, else if, and else)
+
+equality operator can get mistaken for assignment operator
+
+assignment operator = variables
+equality operator == and === (triple checks for strict equality- value and type of variable are the same)
+
+
+let x = 1;
+let y = 2;
+if (x = y) {
+
+} else {
+
+}
+
+this would not run
+
+let x = 1;
+let y = 2;
+if (x == y) {
+
+} else {
+
+}
+
+this would run
+
+CATCH MISSING OPEN AND CLOSING PARENS AFTER A FUNC CALL
+
+when you have a function w/o arguments you may forget to use parenthesis when calling
+
+function oneTwo(){
+	return "One Two";
+}
+
+let result = oneTwo
+
+This would just assign the string "oneTwo" to variable result
+
+let result = oneTwo();
+
+this would assign the function to result, therefore string "One Two"
+
+CATCH ARGUMENTS PASSED IN THE WRONG ORDER WHEN CALLING A FUNC
+
+CATCH OFF BY ONE ERRORS WHEN USING INDEXING
+
+Off by one errors (OBOE)
+
+when youre trying to target a specific index of a string or array or when looping over the indices of them
+
+remember indexing starts at 0 so you will get this error if you try to do an index equal or greater than the number of components
+
+let alphabet = "abcdefghijklmnopqrstuvwxyz";
+let len = alphabet.length;
+for (let i = 0; i <= len; i++) {
+  console.log(alphabet[i]);
+}
+for (let j = 1; j < len; j++) {
+  console.log(alphabet[j]);
+}
+for (let k = 0; k < len; k++) {
+  console.log(alphabet[k]);
+}
+
+notice the differences in this code. the first one loops too many time i <= len
+the second to few j = 1
+the last is correct
+
+USE CAUTION WHEN REINITIALIZING VAR INSIDE A LOOP
+
+PREVENTZ INIFINITE LOOPS W A VALID TERMINAL CONDITION
+
+loops need a terminal condition that ends the looping or else they will be an infinite loop
+
+function loopy() {
+  while(true) {
+    console.log("Hello, world!");
+  }
+}
+
+this will run infinitely
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
